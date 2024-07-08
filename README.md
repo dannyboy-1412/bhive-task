@@ -11,7 +11,7 @@ git clone https://github.com/dannyboy-1412/bhive-task.git
 
 2. Create and activate a Python virtual environment:
 ```
-python -m venv venv
+python3 -m venv venv
 ```
 
 On windows, run:
