@@ -64,7 +64,7 @@ uvicorn main:app
 ```
 ### Frontend (UI)
 
-10. Navigate to the `ui` folder:
+10. Create a new terminal and navigate to the `ui` folder:
 ```
 cd ui
 ```
