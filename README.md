@@ -29,22 +29,27 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Create a `.env` file in the root directory based on the `.env.example` file.
+4. Navigate to the `app` directory:
+```
+cd app
+```
 
-5. Generate a hashed password:
+5. Create a `.env` file in the app directory based on the `.env.example` file.
+
+6. Generate a hashed password:
 - Run the `get_password.py` script
 - Enter your password when prompted in the terminal
 - Copy the resulting hashed password (ignore any attribute error)
 - Add the hashed password to the `.env` file
 
-6. Generate a secret key:
+7. Generate a secret key:
 ```
 openssl rand -hex 32
 ```
 
 Add the generated key to the `.env` file
 
-7. Obtain a RapidAPI key:
+8. Obtain a RapidAPI key:
 - Visit the RapidAPI website
 - Generate an API key
 - Add the API key to the `.env` file
@@ -52,11 +57,6 @@ Add the generated key to the `.env` file
 ## Running the Application
 
 ### Backend (FastAPI server)
-
-8. Navigate to the `app` directory:
-```
-cd app
-```
 
 9. Start the FastAPI server:
 ```
