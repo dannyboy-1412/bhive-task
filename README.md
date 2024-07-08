@@ -9,22 +9,42 @@ This README provides instructions for setting up and running the BHive Task proj
 git clone https://github.com/dannyboy-1412/bhive-task.git
 ```
 
-2. Create a `.env` file in the root directory based on the `.env.example` file.
+2. Create and activate a Python virtual environment:
+```
+python -m venv venv
+```
 
-3. Generate a hashed password:
+On windows, run:
+```
+venv\Scripts\activate
+```
+
+On mac, run:
+```
+source venv/bin/activate 
+```
+
+3. Install the project dependencies:
+```
+pip install -r requirements.txt
+```
+
+4. Create a `.env` file in the root directory based on the `.env.example` file.
+
+5. Generate a hashed password:
 - Run the `get_password.py` script
 - Enter your password when prompted in the terminal
 - Copy the resulting hashed password (ignore any attribute error)
 - Add the hashed password to the `.env` file
 
-4. Generate a secret key:
+6. Generate a secret key:
 ```
 openssl rand -hex 32
 ```
 
 Add the generated key to the `.env` file
 
-5. Obtain a RapidAPI key:
+7. Obtain a RapidAPI key:
 - Visit the RapidAPI website
 - Generate an API key
 - Add the API key to the `.env` file
@@ -33,24 +53,28 @@ Add the generated key to the `.env` file
 
 ### Backend (FastAPI server)
 
-1. Navigate to the `app` directory:
+8. Navigate to the `app` directory:
 ```
 cd app
 ```
 
-2. Start the FastAPI server:
+9. Start the FastAPI server:
 ```
 uvicorn main:app
-
 ```
 ### Frontend (UI)
 
-1. Navigate to the `ui` folder:
+10. Navigate to the `ui` folder:
 ```
 cd ui
 ```
 
-2. Start the development server:
+11. Install dependencies:
+```
+npm install
+```
+
+12. Start the development server:
 ```
 npm run dev
 ```
